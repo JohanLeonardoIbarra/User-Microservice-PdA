@@ -3,7 +3,8 @@ import { Router } from 'express';
 
 const UserRouter = Router();
 
-UserRouter.post('/', new UserController().createStudent);
-UserRouter.post('/login', new UserController().login);
+UserRouter.post('/teacher', UserController.createTeacher);
+UserRouter.post('/student', UserController.createStudent);
+UserRouter.post('/login', UserController.login);
 
 export default UserRouter;
