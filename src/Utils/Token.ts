@@ -7,8 +7,4 @@ export class Token {
       expiresIn: '3h',
     });
   }
-
-  public static validate(token: string): boolean {
-    return true;
-  }
 }
