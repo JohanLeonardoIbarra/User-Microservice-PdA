@@ -7,4 +7,8 @@ export class Token {
       expiresIn: '3h',
     });
   }
+
+  public static verify(token: string) {
+    return JWT.verify(token, Config.secretKey);
+  }
 }

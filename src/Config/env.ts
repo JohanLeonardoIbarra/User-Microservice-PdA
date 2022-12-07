@@ -4,7 +4,6 @@ dotenv.config({ path: '../' });
 const env = process.env.ENV;
 
 interface ConfigI {
-  dbType: string;
   dbHost: string;
   dbPort: number;
   dbUsername: string;
@@ -15,8 +14,7 @@ interface ConfigI {
 }
 
 let config: ConfigI = {
-  dbType: 'mysql',
-  dbHost: 'localhost',
+  dbHost: 'mysql_db',
   dbPort: 3306,
   dbUsername: 'root',
   dbPassword: 'app-pass',
@@ -27,7 +25,6 @@ let config: ConfigI = {
 
 if (env === 'prod')
   config = {
-    dbType: process.env.TYPE || '',
     dbHost: process.env.DB_HOST || '',
     dbPort: Number(process.env.DB_PORT),
     dbUsername: process.env.DB_USER || '',

@@ -37,17 +37,17 @@ export const UserController = {
 
     return response.status(200).send({ token });
   },
+
+  check(request: Request, response: Response) {
+    return response.sendStatus(200);
+  },
 };
 
 const createUser = async (user: User, request: Request, response: Response) => {
   const { name, surname, email, code, password, passwordConfirmation } =
     request.body;
-  if (
-    [name, surname, email, code, password, passwordConfirmation].includes(
-      undefined
-    )
-  )
-    return response.sendStatus(400);
+
+  if ([...request.body].includes(undefined)) return response.sendStatus(400);
 
   const userRepository = AppDataSource.getRepository(User);
   const userRepeated = await userRepository.findOne({
