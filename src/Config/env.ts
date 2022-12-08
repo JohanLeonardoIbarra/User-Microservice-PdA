@@ -14,7 +14,7 @@ interface ConfigI {
 }
 
 let config: ConfigI = {
-  dbHost: 'localhost',
+  dbHost: 'mysql_db',
   dbPort: 3306,
   dbUsername: 'root',
   dbPassword: 'app-pass',
