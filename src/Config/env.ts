@@ -14,10 +14,10 @@ interface ConfigI {
 }
 
 let config: ConfigI = {
-  dbHost: '34.125.249.241',
+  dbHost: 'localhost',
   dbPort: 3306,
-  dbUsername: 'user',
-  dbPassword: 'pass',
+  dbUsername: 'root',
+  dbPassword: 'app-pass',
   dbDatabase: 'test',
   port: 8085,
   secretKey: 'nonSecretKey',
