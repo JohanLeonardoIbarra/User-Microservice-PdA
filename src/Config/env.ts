@@ -14,12 +14,12 @@ interface ConfigI {
 }
 
 let config: ConfigI = {
-  dbHost: 'mysql_db',
+  dbHost: '34.125.249.241',
   dbPort: 3306,
-  dbUsername: 'root',
-  dbPassword: 'app-pass',
+  dbUsername: 'user',
+  dbPassword: 'pass',
   dbDatabase: 'test',
-  port: 8080,
+  port: 8085,
   secretKey: 'nonSecretKey',
 };
 

@@ -1,13 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import UserRouter from 'Router/User';
+import config from 'Config/env';
 
 export class Server {
   private app = express();
   private port: number;
 
   constructor() {
-    this.port = 8080;
+    this.port = config.port;
     this.app.use(express.json());
     this.app.use(cors({ origin: '*' }));
     this.routes();
