@@ -10,7 +10,7 @@ export class Server {
   constructor() {
     this.port = config.port;
     this.app.use(express.json());
-    this.app.use(cors({ origin: '*' }));
+    this.app.use(cors());
     this.routes();
   }
 
