@@ -16,7 +16,7 @@ const AppDataSource = new DataSource({
   logging: false,
 });
 
-console.log(config);
+console.log(AppDataSource.options);
 
 AppDataSource.initialize()
   .then(() => {
